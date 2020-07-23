@@ -21,7 +21,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
 <link async="" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
+<style>
+	.error{
+		color: red;
+	}
+	.redborder{
+		border: 2px solid red;
+	}
+	.greenborder{
+		border: 2px solid green;
+	}
+</style>
 </head>
 <body>
 <script src="js/jquery.vide.min.js"></script>
@@ -135,19 +145,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<label>What time work best for you <i>:</i></label>
 									<div style="margin-top: 10px;">
 										<div class="pretty p-default p-curve p-thick">
-											<input type="radio" name="timing"/>
+											<input type="radio" name="timing[]"/>
 											<div class="state p-primary">
 												<label>Morning</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="radio" name="timing"/>
+											<input type="radio" name="timing[]"/>
 											<div class="state p-primary">
 												<label>Afternoon</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="radio" name="timing"/>
+											<input type="radio" name="timing[]"/>
 											<div class="state p-primary">
 												<label>Evening</label>
 											</div>
@@ -188,8 +198,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$(document).ready(function(){
 			$('form').validate({
 				rules : {
-
-				}
+					username : {
+                        required : true,
+                        minlength : 3,
+                        maxlength : 10,
+                        nowhitespace : true,
+                        alphanumeric : true
+                    },
+                    useremail : {
+                        required : true,
+                        email : true,
+					},
+					userphone : {
+						required : true,
+						number : true,
+					},
+					useraddress : {
+						required : true,
+						nowhitespace : true,
+                        alphanumeric : true
+					},
+					usercity : {
+						required : true,
+						nowhitespace : true,
+                        alphanumeric : true
+					},
+					userstate : {
+						required : true,
+						nowhitespace : true,
+                        alphanumeric : true
+					},
+					userzip : {
+						required : true,
+						number : true
+					},
+                    "timing[]" : {
+                        required : true
+                    },
+                    check : {
+                        required : true
+                    },
+                    oppdate : {
+                        date : true,
+                        lessThanEqual : "#apply"
+					},
+					opptime : {
+                        time : true,
+                        lessThanEqual : "#apply"
+                    }
+				},
+				highlight : function(element){
+                    $(element).addClass('redborder');
+                },
+                unhighlight : function(element){
+                    $(element).addClass('greenborder');
+                },
 			})
 		})
 	</script>
