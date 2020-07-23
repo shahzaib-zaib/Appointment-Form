@@ -1,32 +1,26 @@
 <?php
 
-    $con = mysqli_connect("localhost", "root", "", "registrationform");
+    $con = mysqli_connect("localhost","root","", "registrationform") or die("Connection Failed : " . mysqli_connect_error());
     
-   if(isset($_GET['submit'])){
-       $a = $_GET['username'];
-       $b = $_GET['useremail'];
-       $c = $_GET['pswd'];
-       $d = $_GET['userage'];
-       $e = $_GET['userdate'];
-       $f = $_GET['gender[]'];
-       $g = $_GET['websiteurl'];
+   if(isset($_POST['submit'])){
+       $username = $_POST['username'];
+       $useremail = $_POST['useremail'];
+       $userphone = $_POST['userphone'];
+       $useraddress = $_POST['useraddress'];
+       $usercity = $_POST['usercity'];
+       $userstate = $_POST['userstate'];
+       $userzip = $_POST['userzip'];
+       $timing = $_POST['timing[]'];
 
 
-       $insert_query = "INSERT INTO registerationtable (Name,Email,Password,Age,DateofBirth,Gender,WebsiteUrl)
-       VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$g')";
+       $sql = "INSERT INTO appointmentform(Name,Email,Phone,Address,City,State,Zip,WorkTime)
+       VALUES ('$username', '$useremail', '$userphone', '$useraddress', '$usercity', '$userstate', '$userzip', '$timing')";
 
-       $sqli = mysqli_query($con, $insert_query);
+        if(mysqli_query($con, $sql)){
+            header("location:index.php");
+        }else{
+            echo "<div class='alert alert-danger'>Query Failed</div>";
+        }
 
-       if($sqli == true){
-            echo "<script>
-            alert('Data Inserted Successfully');
-            window.location.href = 'form.html';
-            </script>";
-       }else{
-        echo "<script>
-        alert('Query Faild');
-        </script>";
-       }
-
-   }
+        }
 ?>

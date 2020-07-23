@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="main">
 				<h1 class="w3layouts_head">Business Appointment Form</h1>
 					<div class="w3layouts_main_grid">
-						<form action="#" method="post" class="w3_form_post">
+						<form action="insert.php" method="post" class="w3_form_post">
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<label for="username" class="error"></label>
 								<span class="agileits_grid">
@@ -153,19 +152,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<label>What time work best for you <i>:</i></label>
 									<div style="margin-top: 10px;">
 										<div class="pretty p-default p-curve p-thick">
-											<input type="radio" name="timing[]"/>
+											<input type="radio" name="timing[]" value="morning"/>
 											<div class="state p-primary">
 												<label>Morning</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="radio" name="timing[]"/>
+											<input type="radio" name="timing[]" value="afternoon"/>
 											<div class="state p-primary">
 												<label>Afternoon</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="radio" name="timing[]"/>
+											<input type="radio" name="timing[]" value="evening"/>
 											<div class="state p-primary">
 												<label>Evening</label>
 											</div>
@@ -176,7 +175,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<div class="w3_main_grid">
 								<div class="w3_main_grid_right">
-									<input type="submit" value="Submit">
+									<input type="submit" name="submit" value="Submit">
 								</div>
 							</div>
 						</form>
@@ -247,11 +246,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         required : true
                     },
                     oppdate : {
-                        date : true,
+                        date : true
 					},
 					opptime : {
-                        time : true,
-                        lessThanEqual : "#apply"
+                        time : true
                     }
 				},
 				highlight : function(element){
