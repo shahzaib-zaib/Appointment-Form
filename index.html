@@ -35,53 +35,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>Name <i>:</i></label>
-									<input type="text" name="Task" placeholder="Your Name" required="">
+									<input type="text" name="username" placeholder="Your Name" required="">
 								</span>
 							</div>
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>Email <i>:</i></label>
-									<input type="text" name="Task" placeholder="Your Email" required="">
+									<input type="text" name="useremail" placeholder="Your Email" required="">
 								</span>
 							</div>
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>Phone Number <i>:</i></label>
-									<input type="text" name="Task" placeholder="Phone Number" required="">
+									<input type="text" name="userphone" placeholder="Phone Number" required="">
 								</span>
 							</div><div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>Address <i>:</i></label>
-									<input type="text" name="Task" placeholder="Address" required="">
+									<input type="text" name="useraddress" placeholder="Address" required="">
 								</span>
 							</div>
 							
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>City <i>:</i></label>
-									<input type="text" name="Task" placeholder="Enter Your City" required="">
+									<input type="text" name="usercity" placeholder="Enter Your City" required="">
 								</span>
 							</div>
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>State <i>:</i></label>
-									<input type="text" name="Task" placeholder="Enter Your State" required="">
+									<input type="text" name="userstate" placeholder="Enter Your State" required="">
 								</span>
 							</div>
 							<div class="w3_agileits_main_grid w3l_main_grid">
 								<span class="agileits_grid">
 									<label>Zip <i>:</i></label>
-									<input type="text" name="Task" placeholder="Enter your Code" required="">
+									<input type="text" name="userzip" placeholder="Enter your Code" required="">
 								</span>
 							</div>
 							<div class="agileits_w3layouts_main_grid w3ls_main_grid">
 								<span class="agileinfo_grid">
 									<label>Date / Time <i>:</i></label>
 									<div class="agileits_w3layouts_main_gridl">
-										<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="">
+										<input class="date" id="datepicker" name="oppdate" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="">
 									</div>
 									<div class="agileits_w3layouts_main_gridr">
-										<input type="time" name="Time" placeholder=" " required="">
+										<input type="time" name="opptime" placeholder=" " required="">
 									</div>
 									<div class="clear"> </div>
 								</span>
@@ -183,6 +183,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //footer -->
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="jquery-validation-1.19.2/dist/jquery.validate.min.js"></script>
-    <script src="jquery-validation-1.19.2//dist/additional-methods.min.js"></script>
+	<script src="jquery-validation-1.19.2//dist/additional-methods.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('form').validate({
+				rules : {
+
+				}
+			})
+		})
+	</script>
 </body>
 </html>
