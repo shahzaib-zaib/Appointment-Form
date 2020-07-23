@@ -252,7 +252,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 },
                 unhighlight : function(element){
                     $(element).addClass('greenborder');
-                },
+				},
+				messages : {
+                    username : {
+                        required : "*",
+                        minlength : "Atleast 3 Charactors are Allowed",
+                        maxlength : "Maximum 10 Charactors are Allowed"
+                    },
+                    useremail : {
+                        required : "*"
+                    },
+                    userdate : {
+                        lessThanEqual : "Date has been expired"
+                    }
+                }
 			})
 		})
 	</script>
