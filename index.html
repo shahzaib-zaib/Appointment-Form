@@ -2,14 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Business Appointment Form Widget Flat Responsive Widget Template :: w3layouts</title>
+<title>Business Appointment Form</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Business Appointment Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <!-- //custom-theme -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -92,7 +91,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</span>
 							</div>
 							<div class="agileits_w3layouts_main_grid w3ls_main_grid">
-								<label for="oppdate" class="error"></label>
 								<span class="agileinfo_grid">
 									<label>Date / Time <i>:</i></label>
 									<div class="agileits_w3layouts_main_gridl">
@@ -105,41 +103,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</span>
 							</div>
 							<div class="w3_agileits_main_grid w3l_main_grid">
+								<label for="check[]" class="error"></label>
 								<span class="agileits_grid">
 									<label>What days work best for you <i>:</i></label>
 									<div style="margin-top: 10px;">
 										<div class="pretty p-default p-curve p-thick">
-											<input type="checkbox" />
+											<input type="checkbox" name="check[]" />
 											<div class="state p-primary">
 											  <label>Monday</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="checkbox" />
+											<input type="checkbox" name="check[]" />
 											<div class="state p-primary">
 											  <label>Tuesday</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="checkbox" />
+											<input type="checkbox" name="check[]" />
 											<div class="state p-primary">
 											  <label>Wednesday</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="checkbox" />
+											<input type="checkbox" name="check[]" />
 											<div class="state p-primary">
 											  <label>Thursday</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="checkbox" />
+											<input type="checkbox" name="check[]" />
 											<div class="state p-primary">
 											  <label>Friday</label>
 											</div>
 										</div>
 										<div class="pretty p-default p-curve p-thick">
-											<input type="checkbox" />
+											<input type="checkbox" name="check[]" />
 											<div class="state p-primary">
 											  <label>Saturday</label>
 											</div>
@@ -149,6 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 
 							<div class="w3_agileits_main_grid w3l_main_grid">
+								<label for="timing[]" class="error"></label>
 								<span class="agileits_grid">
 									<label>What time work best for you <i>:</i></label>
 									<div style="margin-top: 10px;">
@@ -243,12 +243,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     "timing[]" : {
                         required : true
                     },
-                    check : {
+                    "check[]" : {
                         required : true
                     },
                     oppdate : {
                         date : true,
-                        lessThanEqual : "#apply"
 					},
 					opptime : {
                         time : true,
@@ -268,11 +267,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         maxlength : "Maximum 10 Charactors are Allowed"
                     },
                     useremail : {
-                        required : "*"
+                        required : "This field is required."
                     },
-                    userdate : {
-                        lessThanEqual : "Date has been expired"
-                    }
+					useraddress : {
+                        required : "This field is required."
+                    },
+					userstate : {
+                        required : "This field is required."
+                    },
+					usercity : {
+                        required : "This field is required."
+                    },
+					oppdate : {
+						required : "This field is required."
+					},
+					opptime : {
+						required : "This field is required."
+					}
                 }
 			})
 		})
